@@ -1,6 +1,11 @@
 README
 ======
 
+Demo
+-------
+
+http://jaune.github.io/sts/
+
 Requirements
 ------------
 
@@ -12,6 +17,6 @@ Installation
 $> npm install
 
 Running
-------------
+-------
 
 $> grunt
