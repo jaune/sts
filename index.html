@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <title>Slower Than Snail</title>
+    <style type="text/css">
+        .machine-ui {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left:0;
+        }
+
+        .machine-ui .controls .control {
+            cursor: pointer;
+        }
+
+        .machine-ui .info {
+            float: right;
+        }
+
+        .machine-ui .bars {
+            cursor: pointer;
+        }
+
+        .machine-ui .bars .bar{
+            width: 0;
+            text-align: center;
+            height: 24px;
+        }
+
+        .machine-ui .bars .cursor {
+            background-color: #f0f;
+        }
+        .machine-ui .bars .current {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="kinetic-container"></div>
+
+    <div class="machine-ui">
+        <pre class="commands"></pre>
+        <div class="info"></div>
+        <div class="controls">
+            <span class="control step">step</span>
+            |
+            <span class="control pause">pause</span>
+            |
+            <span class="control play">play</span>
+            - - - -
+            <span class="control jumpTo">jumpTo</span>
+            |
+            <span class="control replay">replay</span>
+        </div>
+        <div class="bars">
+            <div class="bar cursor"></div>
+            <div class="bar current"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/KineticJS/kinetic.js"></script>
+    <script type="text/javascript" src="build/main.js"></script>
+</body>
+</html>
