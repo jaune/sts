@@ -9,18 +9,45 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
-            main_js: {
+            source_js: {
                 files: [
-                    'source/*.js'
+                    'source/*.js',
+                    'source/**/*.js'
                 ],
-                tasks: ['browserify:main_js']
+                tasks: ['browserify']
             }
         },
         browserify: {
-            main_js: {
-                debug: true,
+            jetpack_index_js: {
                 files: {
-                    'build/main.js': ['source/main.js']
+                    'build/jetpack.js': ['source/jetpack/index.js']
+                },
+                bundleOptions: {
+                    debug: true
+                }
+            },
+            ship_index_js: {
+                files: {
+                    'build/ship.js': ['source/ship/index.js']
+                },
+                bundleOptions: {
+                    debug: true
+                }
+            },
+            peer_index_js: {
+                files: {
+                    'build/peer.js': ['source/peer/index.js']
+                },
+                bundleOptions: {
+                    debug: true
+                }
+            },
+            pathfinder_index_js: {
+                files: {
+                    'build/pathfinder.js': ['source/pathfinder/index.js']
+                },
+                bundleOptions: {
+                    debug: true
                 }
             }
         },
@@ -35,7 +62,7 @@ module.exports = function (grunt) {
 
 
 
-    grunt.registerTask('default', ['run-server', 'browserify:main_js', 'watch:main_js']);
+    grunt.registerTask('default', ['run-server', 'browserify', 'watch']);
 
     grunt.registerTask('run-server', 'Start a custom web server', function() {
         require('./server.js');

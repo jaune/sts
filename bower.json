@@ -1,7 +1,7 @@
 {
-  "name": "machine",
+  "name": "sts",
   "version": "0.0.0",
-  "homepage": "https://github.com/jaune/machine",
+  "homepage": "https://github.com/jaune/sts",
   "authors": [
     "jaune <JauneLaCouleur@gmail.com>"
   ],

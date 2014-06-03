@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <title>Slower Than Snail - ship</title>
+    <style type="text/css">
+        .machine-ui {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left:0;
+        }
+
+        .machine-ui .controls .control {
+            cursor: pointer;
+        }
+
+        .machine-ui .info {
+            float: right;
+        }
+
+        .machine-ui .bars {
+            cursor: pointer;
+        }
+
+        .machine-ui .bars .bar{
+            width: 0;
+            text-align: center;
+            height: 24px;
+        }
+
+        .machine-ui .bars .cursor {
+            background-color: #f0f;
+        }
+        .machine-ui .bars .current {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="kinetic-container"></div>
+
+    <script type="text/javascript" src="bower_components/KineticJS/kinetic.js"></script>
+    <script type="text/javascript" src="build/ship.js"></script>
+</body>
+</html>
